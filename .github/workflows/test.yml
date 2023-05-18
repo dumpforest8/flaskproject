@@ -8,4 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-      - run: echo "Repositoy ${{ github.repository }} has been checked out"
+        run: echo "Repositoy ${{ github.repository }} has been checked out"
+      - name: testing secrets 
+        run: echo ${{ secrets }}
