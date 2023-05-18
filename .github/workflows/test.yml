@@ -1,4 +1,10 @@
-on:
+name: Unit Tests
+on: 
   pull_request:
-    types:
-      - opened
+    types: [opened, reopened]
+jobs:
+  UnitTests: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+      - run: echo "Repositoy ${{ github.repository }} has been checked out"
